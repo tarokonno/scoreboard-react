@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Counter extends Component {
-  propTypes: {
-    score: PropTypes.number.isRequired
-  }
+const Counter = props => {
   
-  render() {
-    return (
-      <div className="counter">
-        <button className="counter-action decrement"> - </button>
-        <div className="counter-score"> {this.props.score} </div>
-        <button className="counter-action increment"> + </button>
-      </div>
-    );
-  }
+  return (
+    <div className="counter">
+      <button className="counter-action decrement" onClick={() => {props.onChange(-1);}}> - </button>
+      <div className="counter-score"> {props.score} </div>
+      <button className="counter-action increment" onClick={() => {props.onChange(+1);}}> + </button>
+    </div>
+  );
 }
 
-
+Counter.propTypes = {
+  score: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired
+}
 
 export default Counter;
