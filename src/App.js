@@ -5,7 +5,6 @@ import Header from './components/Header';
 import Player from './components/Player';
 import AddPlayerForm from './components/AddPlayerForm';
 
-let nextId = 4;
 
 class App extends Component {
   state = {
@@ -17,7 +16,7 @@ class App extends Component {
         id: 1
       },
       {
-        name: 'Cristiano Ronaldo',
+        name: 'Ronaldo',
         score: 9,
         id: 2
       },
@@ -25,6 +24,21 @@ class App extends Component {
         name: 'Lionel Messi',
         score: 10,
         id: 3
+      },
+      {
+        name: 'Ryan Giggs',
+        score: 11,
+        id: 4
+      },
+      {
+        name: 'Zinedine Zidane',
+        score: 5,
+        id: 5
+      },
+      {
+        name: 'Ronaldinho',
+        score: 12,
+        id: 6
       }
     ]
   }
@@ -35,6 +49,8 @@ class App extends Component {
   }
 
   onPlayerAdd = (name) => {
+    let nextId = this.state.players.length + 1;
+
     this.setState({
       players: [
         {
@@ -45,7 +61,6 @@ class App extends Component {
         ...this.state.players,
       ]
     })
-    nextId += 1
   }
 
   onRemovePlayer = (index) => {
