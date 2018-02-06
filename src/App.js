@@ -53,12 +53,12 @@ class App extends Component {
 
     this.setState({
       players: [
+        ...this.state.players,
         {
           name: name,
           score: 0,
           id: nextId
-        },
-        ...this.state.players,
+        }
       ]
     })
   }
