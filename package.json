@@ -1,6 +1,6 @@
 {
-  "homepage": "http://tarokonno.github.io/scoreboard-react-redux",
-  "name": "scoreboard-react-redux",
+  "homepage": "http://tarokonno.github.io/scoreboard-react",
+  "name": "scoreboard-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
